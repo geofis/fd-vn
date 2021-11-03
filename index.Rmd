@@ -306,6 +306,12 @@ __"En promedio, cada anomalía térmica/punto de calor/fuego detectado por los s
 
 ## Acercamiento a Valle Nuevo
 
+- 1973-2016
+
+![](img/vn-false-color-1973-2016.gif){width=80%}
+
+## Acercamiento a Valle Nuevo
+
 - Landsat 8, 2013-2021, color real, hasta el humo lo vemos
 
 ![](img/eight-landsat-2013-2021-true-color.gif){width=45%}
