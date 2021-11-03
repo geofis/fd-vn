@@ -17,20 +17,31 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{css, include=FALSE}
-  .reveal p {
-    text-align: left;
-  }
-  .reveal ul {
-    display: block;
-  }
-  .reveal ol {
-    display: block;
-  }  
+.reveal p {
+  text-align: left;
+}
+.reveal ul {
+  display: block;
+}
+.reveal ol {
+  display: block;
+}  
+.extrasmall {
+  font-size: 2px;
+}
 ```
 
-# ¿Por qué fuego y deforestación?
+```{r, eval=FALSE, echo=FALSE}
+#
+
+![](img/brigido-en-fondo-paradi.jpg)
+```
+
+# ¿Por qué estudiar deforestación y fuego de manera conjunta?
 
 - Se supone que están relacionados, ¿no? Buej, ese es el punto.
+
+<!-- - El fuego es, sobre todo, una práctica usada en la agricultura. -->
 
 ![](img/nasa-firms-example.jpg)
 
@@ -42,33 +53,45 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ![](img/fire-mapioro.jpg)
 
-# ¿Qué sabemos?
+##
 
-- Que __hemos perdido más__ de lo que hemos ganado [@hansen2013high; @Lloyd558346].
+![](img/palma.gif)
 
-- Que el fuego como __impulsor__ de la deforestación lo es sobre todo en el __pinar__ [@Lloyd558346].
 
-- Que hay una __relación__ estrecha entre entre __pérdida de bosque y agricultura migratoria__, esta última dirigida por prácticas de __roza y quema__ [@camara1997republica; @zweifler1994landuse; @Lloyd558346; @wendell1974agricultura; @ovalle1984analisis; @panamericana1967reconocimiento; @tolentino1998inventario; @myers2004evaluacion].
+# ¿Qué sabemos sobre la relación fuego/deforestación en RD?
 
-# Fuego y deforestación
+- Que el fuego es un __impulsor__ de la deforestación, y que lo es sobre todo en el __pinar__ [@Lloyd558346].
 
-- El __fuego__ es, frecuentemente, un __proxy de agricultura__ de subsistencia y de agricultura migratoria.
+- Que __hemos perdido más bosque__ del que hemos ganado [@hansen2013high; @Lloyd558346].
 
-- Pero,
+- Que hubo __fuego en el Holoceno__ [@kennedy20064000; @horn2000prehistoric].
 
-  - __no toda esta agricultura__ se relaciona sólo con el fuego,
-  
-  - __ni todo el fuego__ se debe a esta agricultura.
+## ¿Qué sabemos sobre la relación fuego/deforestación?
 
-- Y, respecto de la deforestación,
+- Que hay una __relación estrecha entre pérdida de bosque y agricultura migratoria__, esta última dirigida por prácticas de __tumba y quema comenzando en pequeños aclareos__ [@camara1997republica; @zweifler1994landuse; @Lloyd558346; @wendell1974agricultura; @ovalle1984analisis; @panamericana1967reconocimiento; @tolentino1998inventario; @myers2004evaluacion].
 
-  - __no todo fuego__ impulsa deforestación,
-  
-  - __ni toda la deforestación__ se asocia con fuego.
+- Por lo tanto, __medir el grado de asociación---*niankesea* "estadística"---entre fuego y deforestación, es crucial para estimar qué tanto contribuye la agricultura de subsistencia__ a la deforestación.
 
-## Fuego y deforestación
 
-- De ahí que **medir el grado de asociación *niankesea* "estadística", entre fuego y deforestación, sea crucial**.
+<!-- ## ¿Qué sabemos sobre la relación fuego/deforestación? -->
+
+<!-- Aclarar que: -->
+
+<!-- - El __fuego__ es, entre varios, un __proxy de agricultura__ de subsistencia y de agricultura migratoria. -->
+
+<!-- - Pero, -->
+
+<!--   - __no toda esta agricultura__ se relaciona sólo con el fuego, -->
+
+<!--   - __ni todo el fuego__ se debe a esta agricultura. -->
+
+<!-- - Y, respecto de la deforestación, -->
+
+<!--   - __no todo fuego__ impulsa deforestación, -->
+
+<!--   - __ni toda la deforestación__ se asocia con fuego. -->
+
+# El problema
 
 - PERO, __con las fuentes nacionales esto no es posible__, porque,
 
@@ -76,17 +99,17 @@ knitr::opts_chunk$set(echo = FALSE)
   
   - o usan unidades territoriales inhomogéneas.
 
-## Fuego y deforestación
+## El problema
 
-- Pero hay opciones.
+- NO TODO ESTÁ PERDIDO, hay opciones.
 
 <img width="500" src="img/nasa-firms-web.jpg">
 <img width="500" src="img/global-forest-change-glad.jpg">
 
 
-## Fuego y deforestación
+## El problema
 
-- Ya tenemos los datos idóneos, pero surge otro problema: un simple análisis de correlación con datos espacializados normalmente es inviable porque se **viola el principio de independencia de las observaciones** (e.g. datos autocorrelacionados espacialmente).
+- OK, tenemos los datos idóneos, pero surge otro problema: un simple análisis de correlación---y más aún, una modelización---con datos espacializados, normalmente es inviable porque se **viola el principio de independencia de las observaciones** (e.g. datos autocorrelacionados espacialmente).
 
 - También tenemos la solución: **modelos espaciales autorregresivos**.
 
@@ -98,23 +121,57 @@ XKCD comics: https://xkcd.com/1831/
 
 # ¿Qué me planteé?
 
-- **Determinar si existe asociación entre fuego y deforestación y, si existe, qué tan fuerte es y dónde**.
+- **Determinar si existe asociación entre fuego y deforestación, qué tan fuerte es, cuando y dónde**.
 
-- "Ya que" se procesarían millones de celdas, "de paso",
+- "Ya que" se procesarían millones de celdas, de paso,
 
+  - explorar patrones por __provincias, municipios y AAPP__,
+  
   - determinar si hay zonas de __concentración significativa__ del fuego y la deforestación,
   
   - caracterizar la __composición de la deforestación__ según el tamaño de las zonas deforestadas,
   
   - determinar si hay alguna __tendencia__ sostenida.
 
-- Y respecto de __Valle Nuevo, ¿qué? Pues, todo lo anterior__.
+- Y, respecto de __Valle Nuevo, ¿qué? Pues, todo lo anterior__.
+
+# ¿Cómo maomeno?
+
+- Cumpliendo los siguientes criterios:
+
+  - Usando __software libre__.
+  
+  - Usando __datos abiertos__.
+  
+  - Creando __script reproducible__ abierto al mundo.
+
+![](img/ossoftware.jpg){width=75%}
+
+## ¿Cómo maomeno?
+
+![](img/loss-year-2001-2018.jpg)
+
+## ¿Cómo maomeno?
+
+![](img/modis-dataset-2001-2018.jpg)
+
+## ¿Cómo maomeno?
+
+- Enfoque de largo plazo.
+
+![](img/long-term-approach-hex-grid-anddr-forest-cover-2000.jpg){width=90%}
+
+## ¿Cómo maomeno?
+
+- Enfoque anual.
+
+![](img/annual-approach-hex-grid-and-2p5-km-buffer-around-forest-loss-2013-as-example.jpg){width=90%}
 
 # ¿Dónde están los resultados?
 
-![](img/preprint.jpg){width=70%}
+![](img/preprint.jpg){width=60%}
 
-<small>https://www.biorxiv.org/content/10.1101/2021.06.15.448604v1.full</small>
+<small>Por el momento, aquí: https://www.biorxiv.org/content/10.1101/2021.06.15.448604v1.full</small>
 
 ##
 
@@ -140,41 +197,155 @@ XKCD comics: https://xkcd.com/1831/
 
 <small>https://github.com/geofis/forest-loss-fire-reproducible/data-download-preparation-eda.pdf</small>
 
-# ¿Cómo maomeno?
-
-- Cumpliendo los siguientes criterios:
-
-  - Usando software libre.
-  
-  - Usando datos abiertos.
-  
-  - Creando script reproducible.
-
-![](img/ossoftware.jpg){width=75%}
-
-## ¿Cómo maomeno?
-
-![](img/loss-year-2001-2018.jpg)
-
-## ¿Cómo maomeno?
-
-![](img/modis-dataset-2001-2018.jpg)
-
-## ¿Cómo maomeno?
-
-![](img/long-term-approach-hex-grid-anddr-forest-cover-2000.jpg)
-
-## ¿Cómo maomeno?
-
-![](img/annual-approach-hex-grid-and-2p5-km-buffer-around-forest-loss-2013-as-example.jpg)
-
 # ¿Qué encontré?
 
+## ¿Qué encontré?
+
+![](img/forest-loss-fires-2001-2018-and-2012-2018-table.jpg)
+
+<!-- ## ¿Qué encontré? -->
+
+<!-- ![](img/forest-loss-fires-2001-2018-and-2012-2018.jpg) -->
+
+## ¿Qué encontré?
+
+Ejemplos simplificados de autocorrelación:
+
+![](img/spatial-autocorrelation-types.jpg)
+
+Fuente: http://dx.doi.org/10.4067/S0250-71612012000300004 [@SUAREZ2012]
+
+## ¿Qué encontré?
+
+![](img/lisa-maps-forest-loss-fires-2001-2018-and-2012-2018.jpg){width=90%}
+
+## ¿Qué encontré?
+
+![](img/spatial-error-model-fitting-forest-loss-fire-density-2001-2018-and-2012-2018.jpg)
+
+"En promedio, cada punto de fuego detectado por los sensores MODIS y VIIRS entre 2001 y 2018 se asoció con 1.5 ha y 3 ha de pérdida de bosque, respectivamente"
+
+## ¿Qué encontré?
+
+![](img/composition-of-annual-forest-loss-by-clearing-size.jpg){width=60%}
+
+## ¿Qué encontré?
+
+![](img/yearly-averages-of-forest-loss-and-fire-density-per-100-km2-time-series.jpg){width=65%}
+
+## ¿Qué encontré?
+
+![](img/lisa-maps-yearly-forest-loss-small-clearings-and-fires.jpg){width=60%}
+
+## ¿Qué encontré?
+
+![](img/lisa-maps-yearly-forest-loss-small-clearings-and-fires-annotated.jpg){width=60%}
+
+## ¿Qué encontré?
+
+![](img/regions-for-annual-models.jpg){width=60%}
+![](img/number-of-years-models-non-significant-table.jpg){width=60%}
+
+## ¿Qué encontré?
+
+Recapitulando:
+
+- Hemos perdido bosque, y mucho (~3100 km<sup>2</sup>)
+
+- El fuego y la pérdida de bosque están __significativamente asociados__, con un tamaño de efecto importante.
+
+- Las mayores concentraciones de pérdida de bosque y fuego se dieron en __Cord. Central, S. de Bahoruco, Los Haitises/Samaná y las regiones Noroeste y Este__.
+
+- __Dicha asociación desapareció desde 2013__ en adelante en el Este y Los Haitises, donde el fuego disminuyó y la deforestación aumentó.
+
+- Las áreas deforestadas en pequeños (<1 ha) y grandes (>1 ha) desmontes, __¡son básicamente idénticas!__ Unos 1550 km cuad. en cada caso.
+
+# Acercamiento a Valle Nuevo
+
+## Acercamiento a Valle Nuevo
+
+- Superficie declarada (Ley 202-04, Dec. 571-09): 906.3 km<sup>2</sup>
+
+- Superficie calculada [@unep2021protected]: 911.02 km<sup>2</sup>
+
+![](img/ge-plain.jpg){width=65%}
+
+## Acercamiento a Valle Nuevo
+
+- ¿Qué había en 2000?
+
+![](img/vn-limit-forest-cover.png){width=90%}
+
+## Acercamiento a Valle Nuevo
+
+- ~85% del AP (~766 km cuad.) tenía cobertura >25%
+
+![](img/vn-limit-forest-cover-25-pct.png){width=90%}
+
+## Acercamiento a Valle Nuevo
+
+![](img/tree-cover-25-pct-pa.jpg){width=90%}
+
+## Acercamiento a Valle Nuevo
+
+- ¿Cuánto de la cobertura >25% se perdió en 2001-2018?
+
+- ~49 km<sup>2</sup>. Fue la cuarta área protegida que mayor superficie absoluta perdió en el periodo.
+
+## Acercamiento a Valle Nuevo
+
+![](img/loss-2001-2018-pa-plot-time-series.jpg){width=63%}
+
+## Acercamiento a Valle Nuevo
+
+- ¿Cómo se ve desde el espacio?
+
+![](img/ge-2013-2020.gif)
+
+## Acercamiento a Valle Nuevo
+
+- Landsat 8, 2013-2021, color real, hasta el humo lo vemos
+
+![](img/eight-landsat-2013-2021-true-color.gif){width=45%}
+
+## Acercamiento a Valle Nuevo
+
+- Landsat 8, 2013-2021, falso color
+
+![](img/eight-landsat-2013-2021-false-color.gif){width=45%}
+
+## Acercamiento a Valle Nuevo
+
+![](img/vn-burned-2014.jpg){width=90%}
+
+## Acercamiento a Valle Nuevo
+
+![](img/vn-burned-2015.jpg){width=80%}
+
+## Acercamiento a Valle Nuevo
+
+- ¿Cuánta actividad de fuego? Fires M6, 2001-2018
+
+![](img/vn-firesm6-map-google-background.png){width=90%}
+
+## Acercamiento a Valle Nuevo
+
+- ¿Cuánta actividad de fuego? LO NUMERITO
+
+![](img/vn-fires-m6.jpg){width=90%}
+
+## Acercamiento a Valle Nuevo
+
+- ¿Cuánta actividad de fuego?
+
+- Con 392, repartidos en 911 km<sup>2</sup> (en menos realmente, pero vamos a asumir que repartidos homogéneamente en el AP), se tienen __aproximadamente (392/911)x100=43 puntos por cada 100 km<sup>2</sup>, CASI EL DOBLE DEL PROMEDIO NACIONAL__, lo cual incluye áreas protegidas y no protegidas.
 
 
-#
-
-![](img/brigido.jpg)
+<!-- Sugerido
+- Morfometría
+- Orden de red sin umbral de acumulación, pues está incomplet
+- Visitar mis clases de geomorfología fluvia, morfometría
+- Mapa de órdenes de red de todo el país -->
 
 # Gracias por su atención
 
@@ -184,4 +355,6 @@ https://geofis.github.io/fd-vn
 
 # Referencias
 
-##
+<section style="font-size: 18px; text-align: left;">
+
+
