@@ -223,7 +223,7 @@ Fuente: http://dx.doi.org/10.4067/S0250-71612012000300004 [@SUAREZ2012]
 
 ![](img/spatial-error-model-fitting-forest-loss-fire-density-2001-2018-and-2012-2018.jpg)
 
-"En promedio, cada punto de fuego detectado por los sensores MODIS y VIIRS entre 2001 y 2018 se asoció con 1.5 ha y 3 ha de pérdida de bosque, respectivamente"
+"En promedio, cada anomalía térmica/punto de calor/fuego detectado por los sensores MODIS y VIIRS, se asoció con 1.5 ha y 3 ha de pérdida de bosque, respectivamente"
 
 ## ¿Qué encontré?
 
@@ -290,7 +290,9 @@ Recapitulando:
 
 - ¿Cuánto de la cobertura >25% se perdió en 2001-2018?
 
-- ~49 km<sup>2</sup>. Fue la cuarta área protegida que mayor superficie absoluta perdió en el periodo.
+- ~49 km<sup>2</sup>. Es decir, perdió una superficie equivalente a aproximadamente 33 veces el Jardín Botánico Nacional del Santo Domingo. "Pila e palo".
+
+- Fue la cuarta área protegida que mayor superficie absoluta perdió en el periodo.
 
 ## Acercamiento a Valle Nuevo
 
@@ -338,13 +340,17 @@ Recapitulando:
 
 - ¿Cuánta actividad de fuego?
 
-- Con 392, repartidos en 911 km<sup>2</sup> (en menos realmente, pero vamos a asumir que repartidos homogéneamente en el AP), se tienen __aproximadamente (392/911)x100=43 puntos por cada 100 km<sup>2</sup>, CASI EL DOBLE DEL PROMEDIO NACIONAL__, lo cual incluye áreas protegidas y no protegidas.
+- Con 392, repartidos en 911 km<sup>2</sup> (en menos realmente, pero asumamos que están repartidos homogéneamente en el AP), se tienen __aproximadamente (392/911)x100=43 puntos por cada 100 km<sup>2</sup>, CASI EL DOBLE DEL PROMEDIO NACIONAL__.
+
+- Considerando que se trata de un área protegida, se trata de __una altísima concentración de puntos de calor/fuegos__.
+
+- De todas formas, la palma se la lleva el PN-JdCR, con casi el doble de hotspots.
 
 
 <!-- Sugerido
 - Morfometría
 - Orden de red sin umbral de acumulación, pues está incomplet
-- Visitar mis clases de geomorfología fluvia, morfometría
+- Clases de geomorfología fluvial, morfometría
 - Mapa de órdenes de red de todo el país -->
 
 # Gracias por su atención
@@ -355,6 +361,6 @@ https://geofis.github.io/fd-vn
 
 # Referencias
 
-<section style="font-size: 18px; text-align: left;">
+<section style="font-size: 16px; text-align: left;">
 
 
