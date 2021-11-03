@@ -62,7 +62,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - Que el fuego es un __impulsor__ de la deforestación, y que lo es sobre todo en el __pinar__ [@Lloyd558346].
 
-- Que __hemos perdido más bosque__ del que hemos ganado [@hansen2013high; @Lloyd558346].
+- Que __hemos perdido más bosque__ del que hemos ganado [@hansen2013high].
 
 - Que hubo __fuego en el Holoceno__ [@kennedy20064000; @horn2000prehistoric].
 
@@ -70,7 +70,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - Que hay una __relación estrecha entre pérdida de bosque y agricultura migratoria__, esta última dirigida por prácticas de __tumba y quema comenzando en pequeños aclareos__ [@camara1997republica; @zweifler1994landuse; @Lloyd558346; @wendell1974agricultura; @ovalle1984analisis; @panamericana1967reconocimiento; @tolentino1998inventario; @myers2004evaluacion].
 
-- Por lo tanto, __medir el grado de asociación---*niankesea* "estadística"---entre fuego y deforestación, es crucial para estimar qué tanto contribuye la agricultura de subsistencia__ a la deforestación.
+- Por lo tanto, medir el grado de __asociación__---*niankesea* "estadística"---entre __fuego y deforestación__, es crucial para estimar __qué tanto contribuye la agricultura__ de subsistencia a la deforestación.
 
 
 <!-- ## ¿Qué sabemos sobre la relación fuego/deforestación? -->
@@ -95,9 +95,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - PERO, __con las fuentes nacionales esto no es posible__, porque,
 
-  - o no son consistentes espacial y/o temporalmente,
+  - o __no son consistentes__ espacial y/o temporalmente,
   
-  - o usan unidades territoriales inhomogéneas.
+  - o usan unidades territoriales __inhomogéneas__.
 
 ## El problema
 
@@ -221,9 +221,9 @@ Fuente: http://dx.doi.org/10.4067/S0250-71612012000300004 [@SUAREZ2012]
 
 ## ¿Qué encontré?
 
-![](img/spatial-error-model-fitting-forest-loss-fire-density-2001-2018-and-2012-2018.jpg)
+__"En promedio, cada anomalía térmica/punto de calor/fuego detectado por los sensores MODIS y VIIRS, se asoció con 1.5 ha y 3 ha de pérdida de bosque, respectivamente"__
 
-"En promedio, cada anomalía térmica/punto de calor/fuego detectado por los sensores MODIS y VIIRS, se asoció con 1.5 ha y 3 ha de pérdida de bosque, respectivamente"
+![](img/spatial-error-model-fitting-forest-loss-fire-density-2001-2018-and-2012-2018.jpg)
 
 ## ¿Qué encontré?
 
@@ -243,12 +243,12 @@ Fuente: http://dx.doi.org/10.4067/S0250-71612012000300004 [@SUAREZ2012]
 
 ## ¿Qué encontré?
 
-![](img/regions-for-annual-models.jpg){width=60%}
-![](img/number-of-years-models-non-significant-table.jpg){width=60%}
+- El fuego no es buen predictor de la pérdida de bosque en determinadas regiones
 
-## ¿Qué encontré?
+![](img/regions-for-annual-models.jpg){width=35%}
+![](img/number-of-years-models-non-significant-table.jpg){width=70%}
 
-Recapitulando:
+## ¿Qué encontré? Recapitulando
 
 - Hemos perdido bosque, y mucho (~3100 km<sup>2</sup>)
 
@@ -256,9 +256,9 @@ Recapitulando:
 
 - Las mayores concentraciones de pérdida de bosque y fuego se dieron en __Cord. Central, S. de Bahoruco, Los Haitises/Samaná y las regiones Noroeste y Este__.
 
-- __Dicha asociación desapareció desde 2013__ en adelante en el Este y Los Haitises, donde el fuego disminuyó y la deforestación aumentó.
+- __Dicha asociación fue débil/intermitente__ en el Este, donde el fuego disminuyó y la deforestación aumentó.
 
-- Las áreas deforestadas en pequeños (<1 ha) y grandes (>1 ha) desmontes, __¡son básicamente idénticas!__ Unos 1550 km cuad. en cada caso.
+- El área deforestada en pequeños (<1 ha) y grandes (>1 ha) desmontes, __¡es básicamente idéntica!__ (~1550 km<sup>2</sup> c/u).
 
 # Acercamiento a Valle Nuevo
 
